@@ -26,36 +26,38 @@ let character = {
 };
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-3">
-  {#if character.created == 0 || character.dead}
+{#if !character.dead}
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {#if character.created == 0 || character.dead}
+      <div
+        class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
+        <ClassAndLevelSelector bind:character="{character}" data="{data}" />
+      </div>
+    {:else}
+      <div
+        in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
+        class="bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
+        <NotesAndButtons bind:character="{character}" />
+      </div>
+    {/if}
+    {#if character.unconcious}
+      <div
+        in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
+        class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
+        <DeathScreen bind:character="{character}" />
+      </div>
+    {:else}
+      <div
+        in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
+        class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
+        <Hitpoints bind:character="{character}" />
+      </div>
+    {/if}
     <div
       class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
-      <ClassAndLevelSelector bind:character="{character}" data="{data}" />
+      <Spells bind:character="{character}" />
     </div>
-  {:else}
-    <div
-      in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
-      class="bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
-      <NotesAndButtons bind:character="{character}" />
-    </div>
-  {/if}
-  {#if character.unconcious}
-    <div
-      in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
-      class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
-      <DeathScreen bind:character="{character}" />
-    </div>
-  {:else}
-    <div
-      in:fade="{{ delay: 0, duration: 500, easing: cubicIn }}"
-      class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
-      <Hitpoints bind:character="{character}" />
-    </div>
-  {/if}
-  <div
-    class=" bg-gradient-to-t shadow-md shadow-rodeo-dust-400 from-rodeo-dust-200 to-rodeo-dust-400 rounded-md m-1">
-    <Spells bind:character="{character}" />
   </div>
-</div>
-
-<div>hallo, world</div>
+{:else}
+  <div>You Died!</div>
+{/if}
