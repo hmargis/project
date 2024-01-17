@@ -10,7 +10,7 @@ return {
 	assets: new Set(["fail-svgrepo-com.svg","favicon.png","heart-alt-svgrepo-com.svg","note-medical-svgrepo-com.svg","pass-svgrepo-com.svg","spark-svgrepo-com.svg","trash-blank-svgrepo-com.svg","trash-can-svgrepo-com.svg","trash-can-with-cover-svgrepo-com.svg"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.jDJ76kNp.js","app":"_app/immutable/entry/app.hRrbu3X0.js","imports":["_app/immutable/entry/start.jDJ76kNp.js","_app/immutable/chunks/scheduler.ZIB-3X42.js","_app/immutable/chunks/singletons.5VpYA_I0.js","_app/immutable/chunks/index.-YLKjFAA.js","_app/immutable/entry/app.hRrbu3X0.js","_app/immutable/chunks/scheduler.ZIB-3X42.js","_app/immutable/chunks/index.M2rPet9x.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.BDSEaNfU.js","app":"_app/immutable/entry/app.ul36uuYL.js","imports":["_app/immutable/entry/start.BDSEaNfU.js","_app/immutable/chunks/scheduler.ZIB-3X42.js","_app/immutable/chunks/singletons.D2BnVoqF.js","_app/immutable/chunks/index.-YLKjFAA.js","_app/immutable/entry/app.ul36uuYL.js","_app/immutable/chunks/scheduler.ZIB-3X42.js","_app/immutable/chunks/index.M2rPet9x.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),

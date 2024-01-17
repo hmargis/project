@@ -309,7 +309,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       },
       {}
-    )}</div></div>`;
+    )}</div></div> <div data-svelte-h="svelte-1slklwu">hallo</div>`;
   } while (!$$settled);
   return $$rendered;
 });
