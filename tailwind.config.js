@@ -1,0 +1,80 @@
+/** @type {import('tailwindcss').Config} */
+import plugin from 'tailwindcss/plugin';
+export default {
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+  theme: {
+    extend: {},
+    colors: {
+      sage: {
+        50: "#f4f6f3",
+        100: "#e7e9e2",
+        200: "#ced4c6",
+        300: "#abb69f",
+        400: "#94a187",
+        500: "#637455",
+        600: "#4c5b40",
+        700: "#3c4933",
+        800: "#313b2a",
+        900: "#293123",
+        950: "#161b13",
+      },
+
+      plantation: {
+        50: "#f4f9f7",
+        100: "#d9eee7",
+        200: "#b3dccf",
+        300: "#86c2b2",
+        400: "#5da493",
+        500: "#43897a",
+        600: "#336e61",
+        700: "#29524a",
+        800: "#274842",
+        900: "#243d38",
+        950: "#102320",
+      },
+      woodsmoke: {
+        50: "#f4f5fb",
+        100: "#e8e9f6",
+        200: "#cbd1ec",
+        300: "#9daadc",
+        400: "#687cc8",
+        500: "#455cb2",
+        600: "#334596",
+        700: "#2b3879",
+        800: "#273265",
+        900: "#252c55",
+        950: "#06070e",
+      },
+      "rodeo-dust": {
+        50: "#f8f6f4",
+        100: "#efeae5",
+        200: "#ded3ca",
+        300: "#c5afa0",
+        400: "#b39484",
+        500: "#a47c6b",
+        600: "#976c5f",
+        700: "#7e5950",
+        800: "#674a45",
+        900: "#543e3a",
+        950: "#2c201e",
+      },
+      pohutukawa: {
+        50: "#fef2f3",
+        100: "#ffe1e4",
+        200: "#ffc9ce",
+        300: "#fea3ab",
+        400: "#fc6d7a",
+        500: "#f43f4f",
+        600: "#e12132",
+        700: "#bd1827",
+        800: "#931621",
+        900: "#821a23",
+        950: "#47080e",
+      },
+    },
+  },
+  plugins: [plugin(function ({addVariant}) {
+    addVariant('progress-unfilled', ['&::-webkit-progress-bar', '&']);
+    addVariant('progress-filled', ['&::-webkit-progress-value', '&::-moz-progress-bar', '&']);
+})],
+};
