@@ -57,3 +57,5 @@ let character = {
     <Spells bind:character="{character}" />
   </div>
 </div>
+
+hallo
